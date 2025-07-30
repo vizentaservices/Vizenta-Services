@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>My Portfolio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    background: linear-gradient(135deg, #ffecd2, #fcb69f);
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    position: relative;
+  }
+
+  /* Decorative Background Shapes */
+  body::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+  }
+  body::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  .navbar {
+    background-color: #222;
+    position: relative;
+    z-index: 1;
+  }
+
+  .navbar-nav .nav-link {
+    color: #fff !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .navbar-nav .nav-link.active {
+    color: #fbbc05 !important;
+  }
+
+  .hero {
+    background: url('ameer.jpeg') center/cover no-repeat;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+
+  .hero h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 4rem auto;
+    gap: 2rem;
+    max-width: 1200px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .category-box {
+    flex: 1 1 250px;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    color: #fff;
+  }
+
+  .category-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  }
+
+  .category-box h3 {
+    font-weight: 800;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+
+  .category-box p {
+    flex-grow: 1;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .category-box a.btn {
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+  }
+
+  .category-box a.btn:hover {
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    transform: translateY(-2px);
+  }
+
+  .university { background: #4a90e2; }
+  .video-editing { background: #e94e77; }
+  .designing { background: #34a853; }
+  .web-development { background: #fbbc05; color: #333; }
+
+  /* Footer */
+  footer {
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    position: relative;
+    z-index: 1;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="container hero-content">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Explore my works in Video Editing, Designing, and Web Development</p>
+  </div>
+</header>
+
+<!-- Categories Section -->
+<section class="categories">
+  <div class="category-box university">
+    <h3>University Project</h3>
+    <p>My academic projects and research work.</p>
+    <a href="university.html" class="btn">Check my Work</a>
+  </div>
+  <div class="category-box video-editing">
+    <h3>Video Editing</h3>
+    <p>Creative video editing work – trailers, vlogs, and promos.</p>
+    <a href="video.html" class="btn">Check my Work</a>
+  </div>
+  <div class="category-box designing">
+    <h3>Designing</h3>
+    <p>Graphic design projects – posters, banners, social media.</p>
+    <a href="design.html" class="btn">Check my Work</a>
+  </div>
+  <div class="category-box web-development">
+    <h3>Web Development</h3>
+    <p>Clean and responsive websites and web apps.</p>
+    <a href="website.html" class="btn">Check my Work</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  &copy; 2025 Your Name. All rights reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
